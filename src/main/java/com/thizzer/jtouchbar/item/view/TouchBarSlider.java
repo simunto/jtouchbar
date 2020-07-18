@@ -16,6 +16,8 @@ public class TouchBarSlider extends TouchBarView {
 
     private double _minValue;
     private double _maxValue;
+    private double _value;
+    private double _knobThickness = 16;
     
     private SliderActionListener _actionListener;
 
@@ -44,5 +46,22 @@ public class TouchBarSlider extends TouchBarView {
 		_maxValue = maxValue;
 		update();
 	}
-  
+
+	public double getValue() {
+		return _value;
+	}
+
+	public void setValue(double value) {
+		_value = value;
+		update();
+	}
+
+	public double getKnobThickness() {
+		return _knobThickness;
+	}
+
+	public void setKnobThickness(double knobThickness) {
+		this._knobThickness = knobThickness;
+		update();
+	}
 }

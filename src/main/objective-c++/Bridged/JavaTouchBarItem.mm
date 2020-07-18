@@ -283,6 +283,12 @@
     
     double maxValue = JNIContext::CallDoubleMethod(env, jTouchBarView, "getMaxValue");
     [slider setMaxValue:maxValue];
+
+    double doubleValue = JNIContext::CallDoubleMethod(env, jTouchBarView, "getValue");
+    [slider setDoubleValue:doubleValue];
+
+    double knobThickness = JNIContext::CallDoubleMethod(env, jTouchBarView, "getKnobThickness");
+    [slider setKnobThickness:knobThickness];
 }
 
 #pragma mark - NSButton
